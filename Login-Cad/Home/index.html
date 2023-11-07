@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Pagina Home</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse obcaecati
+      delectus, inventore aspernatur dignissimos minus vero, iure quae
+      temporibus ducimus, enim laboriosam blanditiis omnis quod maxime mollitia.
+      Quaerat, rem itaque!
+    </p>
+    <br />
+    <br />
+    <h2>Contatos</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione porro
+      necessitatibus aperiam laborum voluptatum deserunt minima veniam modi
+      doloremque itaque autem aut, veritatis sed rerum doloribus soluta sunt,
+      illum asperiores?
+    </p>
+    <br />
+    <button onclick="sair()">Sair</button>
+    <style>
+      body {
+        background-color: rgb(226, 162, 43);
+        color: rgb(74, 20, 199);
+        display: block;
+        padding: 13vh;
+      }
+      button {
+        background-color: blue;
+        color: aliceblue;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px black;
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+      if (localStorage.getItem("token") == null) {
+        alert("Você precisa está logado!!");
+        window.location.href =
+          "http://127.0.0.1:5500/Login-Cad/Login/index.html";
+      }
+      function sair() {
+        localStorage.removeItem("token");
+        window.location.href =
+          "http://127.0.0.1:5500/Login-Cad/Login/index.html";
+      }
+    </script>
+  </body>
+</html>

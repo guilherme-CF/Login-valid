@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+body {
+  background-image: url(./img-cadastro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.card {
+  background-color: rgba(240, 248, 255, 0.638);
+  padding: 30px;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.284) 3px 3px 1px 0px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e207a;
+}
+
+.label-float input {
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #acacac80;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+  border-radius: 0;
+}
+
+.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.label-float input:focus {
+  border-bottom: 2px solid #ffff;
+}
+
+.label-float label {
+  color: #1e207a;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: aqua;
+}
+
+button {
+  background-color: transparent;
+  border-color: blue;
+  color: aquamarine;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease-out;
+}
+
+button:hover {
+  background-color: blue;
+  color: violet;
+}
+
+.fa-eye {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  cursor: pointer;
+  color: #1e207a;
+}
+
+#msgError {
+  text-align: center;
+  color: rgb(226, 52, 43);
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+#msgSuccess {
+  text-align: center;
+  color: rgb(245, 241, 240);
+  background-color: #57df45;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
